@@ -1,0 +1,414 @@
+
+
+.language{
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 1200px;
+    height: 40px;
+    background-color: #00142d;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+.language a{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    height: 10px;
+    padding: 5px;
+    text-decoration: none;
+    
+
+}
+
+.header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40px;
+    width: 1200px;
+    height: 70px;
+    background-color:white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+}
+.logo{ padding: 10px;width: 250px;}    
+.logo img{width:70%;}
+.menu{
+    
+    flex-grow: 1;
+    align-items: center;
+    
+}
+   
+.menu a{
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.input-button{
+    width: 100px;
+    height: 30px;
+    background-color: #0061FF;
+    color: #e2e7ec;
+    font-size: 15px;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    margin: 0 35px;
+}
+
+.Dynamic-Display{
+    background-image: url(https://purerkai.github.io/Cutting/shopline/img/bg1.png);
+    width: 1200px;
+    height: 480px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    align-content: center;
+    justify-content: center;
+
+}
+.Dynamic-Display h1{
+    font-size: 35px;
+    line-height: 1;
+}
+
+.Dynamic-Display h2{font-size: 35px; line-height: 2;}
+p{
+    width: 500px;
+}
+.input-email{
+    background-color: #00142d;
+    margin: 40px 0 0 0;
+    width: 200px;
+}
+.Text-Display{
+    width: 1200px;
+    height: 250px;
+    margin: auto;
+    text-align: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.Text-Display h2{margin:  50px 20px 20px 20px;font-size: 35px; text-align: center;line-height: 1.5;
+}
+.Text-Display p{
+    display: inline;
+    width: 600px;
+    padding: 20px;
+    font-size:   17px;
+    text-align: center;
+    
+}
+.Feature-Introduction{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+    
+
+    
+}
+.Feature-Introduction-Txt
+{width: 720px;
+height: 400px;
+}
+
+.Feature-Introduction h2{
+    font-size: 35px;
+    line-height: 1.5;
+
+}
+.Feature-Introduction p{
+font-size: 17px; 
+margin: 30px 0;
+}
+.Feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 100px;
+
+}
+.list{width: 300px; }
+.Feature-Introduction a{
+    text-decoration: none;
+    margin: 30px 0 0 0;
+    display: inline-block;
+
+}
+.Feature-Introduction img{
+    width: 550px;
+}
+.More-Services{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color:#f4f5f7 ;
+    
+
+    
+}
+.fa-check{
+    color: #005EFF;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    margin-right: 5px;
+} 
+.More-Services h2{
+    width: 1000px;
+    font-size: 35px;
+    margin: auto;
+    text-align: center;
+    line-height: 3;
+    
+}
+.list-Services{
+    width: 1000px;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+.Services img{
+    display: block;
+    margin: auto;
+}
+.Services h3{
+    text-align: center;
+}
+.Services p {
+    width: 300px;
+    font-size: 15px;
+    padding: 20px 0;
+
+    
+}
+.Services{
+    height: 240px;
+    width: 300px;
+}
+.brand{
+    width: 1200px;
+    margin: auto;
+}
+.internal{
+    width: 980pxpx;
+    
+}
+.brand h2{
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0;
+}
+.brand span{
+    color: #0061FF;
+}
+.pictur-list{
+    display: flex;
+    justify-content:space-around;
+}
+.pictur{
+    width: 260px;
+    height: 170px;
+    
+}
+.Story{
+    margin: 20px 0;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    height: 290px;
+}
+.Story-txt{
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+} 
+.Story-txt a{
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.Story-txt p{font-size: 20px;}
+.Earth{
+    width: 1200px;
+    height: 380px;
+    margin: auto;
+    background: url(https://purerkai.github.io/Cutting/shopline/img/bg2.png)no-repeat center/auto;
+    background-color: #00142d;
+    display: flex;
+   
+  
+    
+    
+
+}
+.Earth-txt{
+    margin: 150px 50px;
+}
+.Earth-button{
+    width: 360px;
+    height: 30px;
+    background-color: #0061FF;
+    color: #e2e7ec;
+    font-size: 15px;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    margin: 50px 0;
+}
+
+.Earth h2{
+    color: white;
+    font-size: 35px;
+    width: 600px;
+    
+}   
+.Earth-pictur img{    width: 500px;}
+.Earth-pictur{display: flex; align-items: flex-end;}
+.Footer{
+    width: 1200px;
+    margin: auto;
+    background-color: #00142d;
+    display: flex;
+    flex-direction: column;
+}
+.Footer-List{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+    
+    
+
+.Footer-list{
+    
+    color: #748094;
+    list-style: none;
+    font-size: 15px;
+    line-height: 2;
+
+}
+.Footer-ListTop{
+    color: #ffffff;
+    margin: 20px 0;
+}
+.Footer-button{
+    
+    width: 150px;
+    height: 30px;
+    align-self: flex-end;
+    margin: 20px 50px;
+    background-color: #dbf8ed;
+    
+    
+}
+.Icon{
+    background-color: #00142d;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Icon-Txt{
+    display: flex;
+    
+}
+.Icon-Txt li a {
+    color: #ffffff;
+    margin: 5px;
+    text-decoration: none;
+    
+}
+
+   
+    
+.Icon-Pictur{
+    display: flex;
+    
+}
+.Icon-Pictur div{
+    font-size: 17px;
+    margin: 0 20px;
+   
+    color: #ffffff;
+    
+    
+    
+}
+    
+.Icon h3{
+    color: #748094;
+    font-size: 10px;
+}
+
+
+
+
+
+
+    
+   
+    
+    
+
+
+
+
+
+   
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+   
+    
+    
+    
+    
+
+    
+   
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+    
