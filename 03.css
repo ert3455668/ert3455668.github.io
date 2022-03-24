@@ -251,15 +251,8 @@ margin: 30px 0;
     background: url(https://purerkai.github.io/Cutting/shopline/img/bg2.png)no-repeat center/auto;
     background-color: #00142d;
     display: flex;
-   
-  
-    
-    
-
 }
-.Earth-txt{
-    margin: 150px 50px;
-}
+.Earth-txt{margin: 150px 50px;}
 .Earth-button{
     width: 360px;
     height: 30px;
@@ -270,7 +263,6 @@ margin: 30px 0;
     border: none;
     margin: 50px 0;
 }
-
 .Earth h2{
     color: white;
     font-size: 35px;
@@ -286,15 +278,14 @@ margin: 30px 0;
     display: flex;
     flex-direction: column;
 }
+.Footer-list li a{ color: #748094; text-decoration: none;}
 .Footer-List{
     width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-    
-    
-
+   
 .Footer-list{
     
     color: #748094;
@@ -356,6 +347,16 @@ margin: 30px 0;
     color: #748094;
     font-size: 10px;
 }
+  
+    
+    
+
+
+    
+
+    
+    
+
 
 
 
