@@ -199,29 +199,37 @@ margin: 30px 0;
     height: 240px;
     width: 300px;
 }
-.brand{
+.Brand{
     width: 1200px;
     margin: auto;
 }
-.internal{
+.Brand-Txt{
     width: 980pxpx;
     
 }
-.brand h2{
+.Brand h2{
     text-align: center;
     font-size: 40px;
     margin: 40px 0;
 }
-.brand span{
+.Brand-Txt span{
     color: #0061FF;
 }
-.pictur-list{
+.Pictur-List{
     display: flex;
-    justify-content:space-around;
+    flex-direction: row;
+    
 }
-.pictur{
-    width: 260px;
+
+.Pictur-List li{
+    width: 240px;
     height: 170px;
+    
+}
+.pictur img{
+    width: 50%;
+    
+    
     
 }
 .Story{
@@ -251,8 +259,15 @@ margin: 30px 0;
     background: url(https://purerkai.github.io/Cutting/shopline/img/bg2.png)no-repeat center/auto;
     background-color: #00142d;
     display: flex;
+    
+    }
+   
+  
+    
+    
+.Earth-txt{
+    margin: 150px 50px;
 }
-.Earth-txt{margin: 150px 50px;}
 .Earth-button{
     width: 360px;
     height: 30px;
@@ -263,6 +278,7 @@ margin: 30px 0;
     border: none;
     margin: 50px 0;
 }
+
 .Earth h2{
     color: white;
     font-size: 35px;
@@ -278,22 +294,27 @@ margin: 30px 0;
     display: flex;
     flex-direction: column;
 }
-.Footer-list li a{ color: #748094; text-decoration: none;}
 .Footer-List{
     width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
 }
-   
+    
+    
+
 .Footer-list{
     
     color: #748094;
     list-style: none;
     font-size: 15px;
     line-height: 2;
+    text-decoration: none;
 
 }
+.Footer-list li a{ color: #748094; text-decoration: none;}
+
 .Footer-ListTop{
     color: #ffffff;
     margin: 20px 0;
@@ -347,16 +368,6 @@ margin: 30px 0;
     color: #748094;
     font-size: 10px;
 }
-  
-    
-    
-
-
-    
-
-    
-    
-
 
 
 
