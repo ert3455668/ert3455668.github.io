@@ -1,0 +1,231 @@
+.Odd{
+    width: 1000px;
+    height: 900px;
+    position:relative;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+.Odd-background{
+    
+    width: 440px;
+    height: 270px;
+    background-color: #eeeeee;
+    position: absolute;
+    top:50px;
+    right: 100px;
+    z-index: -1;
+
+}
+.Odd-picture::after{
+   content: url(https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069);
+   width: 57px;
+   position: relative;
+   top: 200px;
+   right: 30px;
+   
+}
+.Odd-picture{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 130px;
+    
+
+    
+}
+.Odd-Text{
+    width: 360px;
+    height: 38 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color:white;
+    background-color: black;
+     
+
+}
+.Odd-Text h1{
+    height: 130px;
+    text-align: center;
+    line-height: 130px;
+    background-color: red;
+    font-size: 50px;
+    
+}
+.Odd-Text h1 span{
+    vertical-align: middle;
+    writing-mode: vertical-lr;
+    font-size: 90px;
+    line-height: 1.5;
+}    
+.Odd-Text h2{
+    font-size: 25px;
+    margin: 10px;
+    margin-top: 30px;
+
+}
+.Odd p{
+    margin: 10px;
+    line-height: 1.5;
+    font-size: 20px;
+}
+.Odd-focus{
+    width: 680px;
+    height: 270px;
+    padding: 20px;
+    background-color:#eeeeee ;
+    position: relative;
+    top: 100px;
+}
+.Odd-focus h2{
+    font-size: 25px;
+    color: red;
+}
+.Odd-focus ul{
+    line-height: 1.5;
+    font-size: 19px;
+}
+
+.Odd-focus ul li::before{
+    font-family: 'Font Awesome 6 free';
+    font-weight: 900;
+    content: "\f111";
+    color: red;
+    font-size: 15px;
+    margin:5px;
+}
+    
+.Odd-focus span{
+    height: 30px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin: auto;
+   
+}
+.Even{
+    width: 1000px;
+    height: 900px;
+    position:relative;
+    margin: auto;
+    margin-top: 150px;
+}
+.Even-background{
+    width: 500px;
+    height: 400px;
+    background-color: #eeeeee;
+    position: absolute;
+    top:50px;
+    right: 100px;
+    z-index: -1;
+}
+.Even-picture{
+    position: relative;
+    top: 130px;
+    left: 10px;
+}
+.Even-Text{
+    width: 360px;
+    height: 360px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+.Even-Text h1{
+    height: 130px;
+    text-align: center;
+    line-height: 130px;
+    background-color: red;
+    font-size: 50px;
+}
+.Even-Text h1 span{
+    vertical-align: middle;
+    writing-mode: vertical-lr;
+    font-size: 90px;
+    line-height: 1.5;
+}    
+.Even-Text h2{
+    font-size: 25px;
+    margin: 10px;
+    margin-top: 30px;
+
+}
+.Even p{
+    margin: 10px;
+    line-height: 1.5 ;
+    font-size: 20px;
+}
+
+.Even-focus{
+    width: 680px;
+    height: 170px;
+    padding: 20px;
+    background-color:#eeeeee ;
+    position: absolute;
+    top: 520px;
+    right: 0px;
+}
+
+.Even-focus h2{
+    font-size: 25px;
+    color: red;
+}
+.Even-focus ul{
+   
+    line-height: 1.5;
+    font-size: 19px;
+    
+}
+.Even-focus ul{
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    line-height: 1.5;
+    font-size: 19px;
+    
+}
+.Even-focus ul li::before{
+    font-family: 'Font Awesome 6 free';
+    font-weight: 900;
+    content: "\f111";
+    color: red;
+    font-size: 15px;
+    
+}
+    
+
+    
+.Even-focus span{
+    height: 30px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    margin: auto;
+   
+}
+.Even a{
+    position: relative;
+    top: -100px;
+    left: 0px;
+
+}
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+
+    
+
+
+    
