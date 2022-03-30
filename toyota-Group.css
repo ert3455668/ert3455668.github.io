@@ -75,6 +75,9 @@
     color: red;
 }
 .Odd-focus ul{
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 10px;
     line-height: 1;
     font-size: 19px;
 }
@@ -102,7 +105,7 @@
     grid-template-rows: repeat(24, 40px);
 }
 .Even-picture{
-    margin: 5px;
+    margin: 0 5px;
     grid-row: 7;
 }
 .Even-Text{
@@ -143,7 +146,7 @@
 .Even-focus{
     width: 680px;
     height: 270px;
-    
+    padding: 20px;
     background-color:#eeeeee ;
     grid-column: 6;
     grid-row: 17;
@@ -154,8 +157,11 @@
     color: red;
 }
 .Even-focus ul{
-    
+    padding: 5px;
+    margin: 10px;
+    line-height: 1.5;
     font-size: 19px;
+    
 }
 .Even-focus li{
     list-style: none;
