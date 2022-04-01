@@ -8,102 +8,109 @@
 }
 .Odd-background{
     
-    width: 440px;
+    width: 460px;
     height: 270px;
     background-color: #eeeeee;
     position: absolute;
     top:50px;
-    right: 100px;
+    right: 90px;
     z-index: -1;
 
 }
-.Odd-picture::after{
-   content: url(https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069);
-   width: 57px;
-   position: relative;
-   top: 200px;
-   right: 30px;
-   
-}
-.Odd-picture{
-    display: flex;
-    justify-content: center;
+
+.Odd a{
     position: relative;
-    top: 130px;
-    
+    top: -110px;
+    right: -800px;
+}
+.Odd-picture a{
+   position: relative;
+   top:130px;
+   left:150px;
 
     
 }
 .Odd-Text{
     width: 360px;
-    height: 38 0px;
     position: absolute;
     top: 0px;
     left: 0px;
     color:white;
     background-color: black;
+}
      
 
-}
+    
 .Odd-Text h1{
     height: 130px;
     text-align: center;
     line-height: 130px;
+    letter-spacing: 5px;
     background-color: red;
     font-size: 50px;
     
 }
 .Odd-Text h1 span{
+    
     vertical-align: middle;
     writing-mode: vertical-lr;
     font-size: 90px;
-    line-height: 1.5;
+    line-height: 1.5
+    
 }    
+  
 .Odd-Text h2{
     font-size: 25px;
     margin: 10px;
     margin-top: 30px;
+    letter-spacing: 5px;
 
 }
 .Odd p{
     margin: 10px;
     line-height: 1.5;
     font-size: 20px;
+    letter-spacing: 10px;
 }
 .Odd-focus{
     width: 680px;
-    height: 270px;
     padding: 20px;
     background-color:#eeeeee ;
     position: relative;
-    top: 100px;
+    top: 50px;
+    
 }
 .Odd-focus h2{
     font-size: 25px;
     color: red;
 }
 .Odd-focus ul{
-    line-height: 1.5;
     font-size: 19px;
+    margin: 20px 0;
+    
+}
+.Odd-focus li{
+    margin: 20px 0;
+    
 }
 
-.Odd-focus ul li::before{
-    font-family: 'Font Awesome 6 free';
-    font-weight: 900;
-    content: "\f111";
-    color: red;
-    font-size: 15px;
-    margin:5px;
-}
-    
 .Odd-focus span{
-    height: 30px;
-    display: inline-block;
+    margin: 15px 0x;
     background-color: black;
     color: white;
-    margin: auto;
-   
+    padding: 5px;
 }
+    
+    
+   
+   
+.Odd-focus ul li::before{
+    content: '▪';
+    color: red;
+    margin:  0 5px 2px 12px;
+    
+}
+    
 .Even{
     width: 1000px;
     height: 900px;
@@ -117,7 +124,7 @@
     background-color: #eeeeee;
     position: absolute;
     top:50px;
-    right: 100px;
+    right: 50px;
     z-index: -1;
 }
 .Even-picture{
@@ -127,7 +134,7 @@
 }
 .Even-Text{
     width: 360px;
-    height: 360px;
+    
     background-color: black;
     color: white;
     position: absolute;
@@ -158,6 +165,7 @@
     margin: 10px;
     line-height: 1.5 ;
     font-size: 20px;
+    letter-spacing: 10px;
 }
 
 .Even-focus{
@@ -189,11 +197,9 @@
     
 }
 .Even-focus ul li::before{
-    font-family: 'Font Awesome 6 free';
-    font-weight: 900;
-    content: "\f111";
+    content: '▪';
     color: red;
-    font-size: 15px;
+    margin:  0 5px 2px 12px;
     
 }
     
