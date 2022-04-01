@@ -90,7 +90,7 @@
     
 }
 .Odd-focus li{
-    margin: 20px 0;
+    margin: 20px 0 20px  20px;
     
 }
 
@@ -105,9 +105,15 @@
    
    
 .Odd-focus ul li::before{
-    content: '▪';
-    color: red;
-    margin:  0 5px 2px 12px;
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: red;
+    margin: -8px -9px;
+
+    
+    /* margin:  0 5px 2px 12px; */
     
 }
     
@@ -119,18 +125,19 @@
     margin-top: 150px;
 }
 .Even-background{
-    width: 500px;
+    width: 520px;
     height: 400px;
     background-color: #eeeeee;
     position: absolute;
     top:50px;
-    right: 50px;
+    right: 200px;
     z-index: -1;
 }
-.Even-picture{
+.Even-picture {
     position: relative;
-    top: 130px;
+    top: 230px;
     left: 10px;
+    
 }
 .Even-Text{
     width: 360px;

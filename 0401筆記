@@ -1,0 +1,24 @@
+aspect-ratio:長寬比的屬性，
+
+等比例問題螢幕過寬時段點的寫法 max-width
+
+vertical-aling:設定inline物件在容器內的位置，圖片或是許多inline物件對其基線
+               可設定的值
+
+
++ 是後面那個如果是~是全部都有
+
+ menu_control:checked:按鈕的選取器，
+ 
+
+頂線 overline:
+中線 line-through
+基線 baseline:
+底線 underline 
+RWD作法 小切到大
+        手機>>>>>>桌機
+
+        在做RWD的時候寬高或是padding或是margin因為是要複寫前面的值所以不可以不須就設為0 要設為auto
+        
+
+        桌機>>>>>>手機
