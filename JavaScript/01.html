@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .material{
+            width: 1200px;
+            margin: auto;
+        }
+        .name,
+        .DepartmentofNationality,
+        .Interest {display: flex; font-size: 25px;}
+        #imge1{width: 20%; }
+        .main-pic{display: flex; justify-content: center;}
+       
+        .pic{display: flex; }
+        .pic img{width: 100%;}
+            
+        
+       
+
+            
+
+      
+      
+    
+
+    </style>
+</head>
+<body>
+    <div class="material">
+        <div class="main-pic">
+            <img id="imge1"  >
+        </div>
+       
+        <div class="self_introduction">
+            <div class="name">
+                <h3>姓名:</h3>
+                <p></p>
+            </div>
+            <div class="DepartmentofNationality">
+                <h3>學系:</h3>
+                <p></p>
+            </div>
+            <div class="Interest">
+                <h3>興趣:</h3>
+                <p></p>
+            </div>
+            <div class="pic">
+                <img>
+                <img>
+                <img>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+    <script>
+        let img = document.getElementById("imge1")
+        let imgUrl = "https://ert3455668.github.io/material/S__20275363.jpg"
+        let p = document.querySelectorAll("p");
+        let pic = document.querySelectorAll(".pic img");
+        const answerArray = ["楊明翰","國際企業","玩車",];
+       
+        img.setAttribute("src",imgUrl);
+        const imageArray = [
+            "https://ert3455668.github.io/material/S__40861701.jpg",
+            "https://ert3455668.github.io/material/S__40861718.jpg",
+            "https://ert3455668.github.io/material/S__40861716.jpg"
+        ];
+
+
+
+        answerArray.forEach((answer,index)=>{
+            console.log(p[index].innerText = answerArray[index]);
+            });
+        imageArray.forEach((image,index) => {
+        console.log(pic[index].setAttribute("src",imageArray[index]));
+        });    
+    </script>
+</body>
+</html>
