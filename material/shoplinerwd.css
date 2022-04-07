@@ -1,0 +1,501 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 20px; 
+    background-color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+     
+.language{display: none;}
+#menu_control:checked ~ .header .menu{
+    display: block;}
+
+#menu_control{display: none;}    
+.hb{
+    font-size: 30px;
+    
+}   
+.logo a img {width: 100px; margin-top: 7px; vertical-align: top}
+.menu{
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 100%;
+    display: none;
+    
+}
+.menu li{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+    font-size: 20px;
+    padding: 30px  15px;
+    border-bottom: 1px solid #ccc;
+    letter-spacing: 3px;
+} 
+.header-btn{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.Dynamic-Display{
+    /* background-image:url(https://purerkai.github.io/Cutting/shopline/img/bg1.png);  */
+    background-color: #00142d;
+    text-align: center;
+    color: white;
+    
+
+
+}
+/* .Dynamic-Display-Picture{
+    width: 100%;
+} */
+.Dynamic-Display-Picture img{
+    
+    width: 100%;
+    vertical-align: top;
+    
+}
+.Dynamic-Display h1,.Dynamic-Display h2{
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 3px;
+    margin: 10px 0 ;
+    
+}
+.Dynamic-Display h2{
+    color: #00c66a;
+    
+    
+}
+.Dynamic-Display p {
+    margin: 0 20px;
+    letter-spacing: 4px;
+    line-height: 1.5;
+    
+}
+.Dynamic-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 0 20px; */
+    padding: 10px 20px;
+}
+.input-email{
+    background-color: #00142d;
+    padding: 5px 0;
+    width: 100%;
+    color: white;
+    margin: 20px 0;
+
+}
+.input-button{
+    width: 100%;
+    height: 30px;
+    background-color: #0061FF;
+    color: #e2e7ec;
+    font-size: 15px;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    
+}
+.Txt-Display{
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    margin: 10px 0 ; 
+
+    
+} 
+.Txt-Display h2{
+    font-size: 30px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin: 10px 0 ;
+}
+.Txt-Display p{
+    color: #324255;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+} 
+.Main-Content{
+    padding: 10px 20px;
+}
+/* .Main-Content-Picture{
+    width: 100%;
+} */
+.Main-Content-Picture img{
+    width:100%;
+}    
+.Main-Content h2{
+    font-size: 25px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+.Main-Content p{
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.Main-list{
+    margin-top: 20px;
+}
+.Main-list li{
+    margin: 15px 0;
+    font-size: 18px;
+}
+.Main-Content a{ 
+    display: block;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 30px 0 ;
+    
+} 
+    
+.fa-check{
+    color: #005EFF;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    margin-right: 5px;
+} 
+.More-Services{
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color:#ccc ;
+    
+
+    
+}
+
+.More-Services h2{
+    text-align: center;
+    font-size: 35px;
+    padding: 30px;
+    
+}
+   
+    
+    
+.list-Services{
+    
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    
+}
+.Services{
+    box-sizing: border-box;
+    padding: 30px;
+}
+.Services img{
+    display: block;
+    margin: auto;
+}
+.Services h3{
+    text-align: center;
+}
+.Services p {
+   
+    font-size: 15px;
+    padding: 20px 0;
+    letter-spacing: 4px;
+    line-height: 1.2;
+}
+.Earth{
+   
+    margin: auto;
+    background: url(https://purerkai.github.io/Cutting/shopline/img/bg2.png); 
+    background: no-repeat;
+    background-size:cover;
+    background-color: #00142d;
+    display: flex;
+    padding: 20px 20px;
+    
+}
+.Earth-button{
+    width:25.390625%; 
+    aspect-ratio: 280/46;
+    background-color: #0061FF;
+    color: #e2e7ec;
+    font-size: 15px;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    margin: 50px 0;
+   
+}
+
+.Earth h2{
+    color: white;
+    font-size: 35px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    
+}   
+.Footer{
+    
+    margin: auto;
+    background-color: #00142d;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}   
+  
+.Footer-list2{
+    display: none;
+}
+#menu_control2:checked ~ .Footer .Footer-list2{
+    display: block;}   
+
+.Footer-list3{
+    display: none;
+}
+#menu_control3:checked ~ .Footer .Footer-list3{
+    display: block;}
+
+.Footer-list4{
+    display: none;
+}
+#menu_control4:checked ~ .Footer .Footer-list4{
+    display: block;}
+
+.Footer-list5{
+    display: none;
+}
+#menu_control5:checked ~ .Footer .Footer-list5{
+    display: block;}    
+
+.Footer-list6{
+    display: none;
+}
+#menu_control6:checked ~ .Footer .Footer-list6{
+    display: block;}    
+
+.Footer-list7{
+    display: none;
+}
+#menu_control7:checked ~ .Footer .Footer-list7{
+    display: block;}        
+
+.Footer-list8{
+    display: none;
+}
+#menu_control8:checked ~ .Footer .Footer-list8{
+    display: block;}      
+#menu_control2,
+#menu_control3,
+#menu_control4,
+#menu_control5,
+#menu_control6,
+#menu_control7,
+#menu_control8{display: none;}
+        
+.Footer-title{
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px 10px 25px 0px;
+    border-bottom: 1px solid #ccc ;
+}
+.Footer-list2 li,
+.Footer-list3 li,
+.Footer-list4 li,
+.Footer-list5 li,
+.Footer-list6 li,
+.Footer-list7 li,
+.Footer-list8 li{
+    list-style: none;
+    margin: 30px 0;
+    position: relative;
+    left: 70px;
+}
+
+.Footer-list2 li a,
+.Footer-list3 li a,
+.Footer-list4 li a,
+.Footer-list5 li a,
+.Footer-list6 li a,
+.Footer-list7 li a,
+.Footer-list8 li a{
+    text-decoration: none;
+    color:#748094;
+}
+
+.Icon{
+    background-color: #00142d;
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Icon-Link{
+    margin: 20px 80px
+}
+.Icon-Link a{
+    width: 150px;
+    height: 30px;
+    padding: 10px;
+    color:black;
+    text-decoration: none;
+    background-color: rgb(227, 201, 201);
+    
+    
+    
+}
+    
+.Icon-Pictur{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    
+}
+.Icon-Pictur div{
+    font-size: 17px;
+    margin: 0 15px;
+    
+    color: #ffffff;
+    
+}
+.Icon-Txt{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.Icon-Txt a {
+    color: #ffffff;
+    margin: 10px 0;
+    text-decoration: none;
+    
+    
+}
+.Icon p{
+    color: #748094;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 30px 0 ;
+}
+@media screen and (min-width:768px) {
+    .Dynamic-Display{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .Dynamic-Display h1{
+        margin-top: 90px;
+    }
+    .Dynamic-Display h1,.Dynamic-Display h2,.Dynamic-Display p{
+        text-align: left;
+        margin-left:  20px;
+    }
+    .Dynamic-Display-Picture{
+        order: 1;
+    }
+    .Dynamic-button{
+        flex-direction: row;
+    }
+    .input-email{
+        width:50.8541666667%;
+        aspect-ratio: 260/25;
+    }
+    .input-button{
+        width: 12.3697916667%;
+        aspect-ratio: 95/30;
+        margin: 0  10px;
+    }
+    .Txt-Display{margin: 50px 0;}
+    .Txt-Display p {
+        letter-spacing: 3px;
+        line-height: 1.5;
+        
+    }
+    .Main-list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 150px;
+        
+        
+    }
+    .Icon-Link{
+        margin: 20px 20px
+    }
+    .Icon-Pictur{
+        justify-content: left;
+    }
+    .Icon-Txt{
+        flex-direction: row;
+        margin: 0 20px;
+    } 
+    .Icon-Txt a {margin-right: 25px; }
+    .Icon p{
+        text-align: left;
+        margin: 30px 20px;
+    }    
+        
+        
+   
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:992px){
+    .Dynamic-Display{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        
+        
+    }
+    .Dynamic-Display-Picture {
+       margin-top: 30px;
+    }
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
