@@ -1,7 +1,8 @@
 
 .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    
     position: relative;
     height: 20px; 
     background-color: white;
@@ -9,8 +10,36 @@
     position: fixed;
     left: 0;
     right: 0;
+    z-index: 1;
 }
-     
+.main-header{   
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.language{
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #00142d;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+    
+    
+   
+.main-language{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}     
 .language{display: none;}
 #menu_control:checked ~ .header .menu{
     display: block;}
@@ -20,7 +49,7 @@
     font-size: 30px;
     
 }   
-.logo a img {width: 100px; margin-top: 7px; vertical-align: top}
+.logo a img {width: 100px; vertical-align: middle}
 .menu{
     position: absolute;
     
@@ -36,27 +65,26 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    
     font-size: 20px;
     padding: 30px  15px;
     border-bottom: 1px solid #ccc;
     letter-spacing: 3px;
 } 
+    
 .header-btn{
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    
     display: none;
 }
 .Dynamic-Display{
-    /* background-image:url(https://purerkai.github.io/Cutting/shopline/img/bg1.png);  */
-    background-color: #00142d;
+    background-image:url(https://purerkai.github.io/Cutting/shopline/img/bg1.png);  
     text-align: center;
     color: white;
+}
+    
     
 
 
-}
+
 /* .Dynamic-Display-Picture{
     width: 100%;
 } */
@@ -110,10 +138,10 @@
     
 }
 .Txt-Display{
-    display: inline-block;
+    display: block;
     padding: 0 20px;
     text-align: center;
-    margin: 10px 0 ; 
+    margin: 10px auto ; 
 
     
 } 
@@ -255,48 +283,29 @@
     flex-direction: column;
     position: relative;
 }   
+#menu_control2:checked ~ .Footer .Footer-list2,
+#menu_control2:checked ~ .Footer .Footer-list3,
+#menu_control2:checked ~ .Footer .Footer-list4,
+#menu_control2:checked ~ .Footer .Footer-list5,
+#menu_control2:checked ~ .Footer .Footer-list6,
+#menu_control2:checked ~ .Footer .Footer-list7,
+#menu_control2:checked ~ .Footer .Footer-list8{display: block;}
+
+.Footer-list2{display: none;}
+.Footer-list3{display: none;}
+.Footer-list4{display: none;}
+.Footer-list5{display: none;}
+.Footer-list6{display: none;}
+.Footer-list7{display: none;}
+.Footer-list8{display: none;}  
+    
   
-.Footer-list2{
-    display: none;
-}
-#menu_control2:checked ~ .Footer .Footer-list2{
-    display: block;}   
+    
 
-.Footer-list3{
-    display: none;
-}
-#menu_control3:checked ~ .Footer .Footer-list3{
-    display: block;}
+  
 
-.Footer-list4{
-    display: none;
-}
-#menu_control4:checked ~ .Footer .Footer-list4{
-    display: block;}
 
-.Footer-list5{
-    display: none;
-}
-#menu_control5:checked ~ .Footer .Footer-list5{
-    display: block;}    
 
-.Footer-list6{
-    display: none;
-}
-#menu_control6:checked ~ .Footer .Footer-list6{
-    display: block;}    
-
-.Footer-list7{
-    display: none;
-}
-#menu_control7:checked ~ .Footer .Footer-list7{
-    display: block;}        
-
-.Footer-list8{
-    display: none;
-}
-#menu_control8:checked ~ .Footer .Footer-list8{
-    display: block;}      
 #menu_control2,
 #menu_control3,
 #menu_control4,
@@ -339,7 +348,7 @@
 
 .Icon{
     background-color: #00142d;
-    
+    position: relative;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -470,17 +479,165 @@
 
 
 @media screen and (min-width:992px){
+    .language{
+        display: block;
+        display: flex;
+        position: fixed;
+        background-color: #00142d;
+        height: 40px;
+        left: 0;
+        right: 0;
+        top:0;
+        padding: 0 calc(0.985%);
+        
+        
+    
+    }
+        
+    .language a{
+   
+    color: white;
+    /* width: 80px; */
+    height: 10px;
+    padding: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+    
+
+    }
+    
+
+    .header{
+        display: flex;
+        
+    }
+    .hb{display: none;}
+    .header-btn{
+        
+            display: flex;
+           
+             align-items: center; 
+            }
+         
+     
+ 
+     
+    
+   .header-btn a{
+        width: 70px;
+        height: 20px;
+        padding: 10px 20px;
+        
+        display: block;
+        text-decoration: none;
+        background-color: #005EFF;
+        border-radius: 100px;
+       
+       
+    
+   }
+   
+   
+
+     
+    .menu{
+        position: static;
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+    }
+    .menu li{
+        padding: 0;
+        border-bottom: 0px;
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    
+    .Earth-icon{       
+        width: 30px;
+        border-right: white solid 1px;
+    } 
+    .header{
+        top: 40px;
+    }
     .Dynamic-Display{
         display: flex;
         flex-direction:row;
         flex-wrap: wrap;
-        
-        
+    }
+    .Dynamic-Display{
+        margin-top: 30px;
     }
     .Dynamic-Display-Picture {
        margin-top: 30px;
     }
+    .Main-Content{
+        display: flex;
+        flex-direction: row;
+    }
+    .Main-Content:nth-child(even){
+        flex-direction: row-reverse;
+    }
+    .Main-Content-Picture{ vertical-align: middle;
+        display: flex;
+        align-items: center;
+        
+    }
+    .Footer-list2,
+    .Footer-list3,
+    .Footer-list4,
+    .Footer-list5,
+    .Footer-list6,
+    .Footer-list7,
+    .Footer-list8{
+        display: block;
+        position: relative;
+       left: -70px;
+    }  
+    .Footer-title{margin: 20px 0;}
+    .Footer-List{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .Main-List{
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 20px;
+    }
+    .Icon{flex-direction: row;}
+    .Icon-Link{
+        position:absolute ;
+        right: 0px;
+        top: -90px;
+    }
+    .Icon-Pictur,.Icon-Txt{align-items: center;}    
+    .Footer-title{
+       
+        border-bottom: none;
+    }
+
+
+
+    
+
+
+        
 }    
+@media screen and (min-width:1200px){
+    section{max-width: 1200px; margin: auto;}
+    .main-language,.main-header{max-width: 1200px;}
+    .logo{margin-left: 20px;}
+    .header-btn{margin-right: 20px;}
+    
+    
+
+}
 
 
 

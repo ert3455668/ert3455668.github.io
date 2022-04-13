@@ -1,0 +1,27 @@
+.container-fluid{
+    background-color: #7952b3;
+}
+.rtl-txt{
+padding: 1.25rem;
+margin-top: 20px;
+margin-bottom: 20px;
+border: 1px solid #eee;
+border-left: 3px solid #f0ad4e;
+border-radius: 0.25rem;
+   
+}
+.Icon{
+padding: 10px;
+border-radius: 10px;
+/* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 10%); */
+}
+.btn-bd-download{
+border: 1px solid #ffe484;
+color: #ffe484;
+padding: 10px;
+border-radius: 5px;
+text-decoration: none;
+}
+.Footer{
+    background-color: #f8f9fa;
+}
