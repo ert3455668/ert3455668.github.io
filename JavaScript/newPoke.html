@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>寶可夢圖鑑</h1>
+    <button id='loadall' onclick="allPokemon()">Load All</button>
+    <button id='addone' onclick="AddPokemon()">Click +1</button>
+    <button id='removeone' onclick="removePokemon()">Clear -1</button>
+    <button id="reset" onclick="resetPokemon()">Rest</button>
+    <div id="container"></div>
+    <script>
+        let num = 0;
+    
+        let container;
+        window.onload = function(){
+            container = document.getElementById("container");
+
+
+        }
+       
+
+        function pokemon(file){
+            let pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${file}.png`;
+
+            let img = document.createElement("img");
+
+            img.setAttribute("src", pathFile);
+            container.append(img);
+            img.addEventListener("click",function(event){
+            container.removeChild(event.target);
+
+            })
+        } 
+           
+
+          
+
+        //loadALL
+        function allPokemon(){
+            for(i=1;i<10;i++){
+                let file = i.toString().padStart(3,"0");
+                pokemon(file)
+                num = parseInt(file);
+
+            }
+        }
+        //減少一個
+        function removePokemon(){
+            container.removeChild(container.lastChild)
+            num-=1;
+        }
+
+        //新增一個
+        function AddPokemon(){
+            num+=1;
+            let add = num.toString().padStart(3,"0");
+            pokemon(add)
+        }
+
+        //整份重製
+        function resetPokemon(){  
+           container.innerHTML = "";
+           num = 0;
+        }
+
+
+
+    </script>
+</body>
+</html>
