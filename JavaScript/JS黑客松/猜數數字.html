@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        .input_display{
+            border: 2px solid #ccc;
+            height: 400px;
+            margin-bottom: 1rem;
+        }
+        .btn-group{
+            margin-bottom: 1rem;
+        }
+        .input_display{
+            overflow: auto;
+            
+            justify-content: center;
+            
+        }
+        .input_display p {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            height: 20px;
+            font-size: 30px;
+            margin: 20px;
+            
+            
+        }
+
+    </style>
+    <title>猜數字</title>
+  </head>
+  <body>
+    
+        <div class="container border border-primary p-3 mt-3">
+            <div class="btn-group col-12 " role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-secondary start" >開始</button>
+                <button type="button" class="btn btn-outline-secondary reset" disabled="disabled">放棄重來</button>
+                <button type="button" class="btn btn-outline-secondary show_answer" disabled="disabled">看答案</button>
+            </div>
+            <div class=" col-12 input_display "></div>
+               
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg" disabled="disabled">猜答案</span>
+                <input type="text" class="form-control input_answer" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" value="" disabled="disabled" onkeyup="this.value=this.value.replace(/[^\d]/g,'')">
+                <button type="button" class="btn btn-secondary enter" disabled="disabled">答案送出</button>
+            </div>
+            
+        </div>
+    
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script>
+        let container = document.querySelector(".container")
+        let start = document.querySelector(".start")
+        let reset = document.querySelector(".reset")
+        let input_display = document.querySelector(".input_display")
+        let input_answer = document.querySelector(".input_answer")
+        let enter = document.querySelector(".enter")
+        let show_answer = document.querySelector('.show_answer')
+        let a = 0
+        let b = 0
+        
+
+        let answer =[]
+
+        window.onload = function(){
+            alert("請按開始")
+        }
+
+        
+
+
+
+        //亂數陣列產生4欄的陣列,且陣列裡數字不重複,範圍為0~9
+        start.addEventListener('click',function(){
+            button()
+            while(answer.length <4){
+                //產生亂數
+                let randomnumber =  Math.floor(Math.random()*9);
+                //判斷亂數是否重複
+                if(answer.length==0){
+                    answer.push(randomnumber)
+
+                }
+                else{
+                    if (!answer.includes(randomnumber)) {
+                        answer.push(randomnumber)
+                    } 
+                    else {
+                        randomnumber = Math.floor(Math.random() * 9)
+                    }
+                }
+                
+            }
+
+                
+
+
+        })
+        /**
+         **開關控制
+        **/
+        function button(){
+            document.querySelector(".reset").disabled = false;
+            document.querySelector(".show_answer").disabled = false;
+            document.querySelector(".input_answer").disabled = false;
+            document.querySelector(".enter").disabled = false;
+        }
+        
+        //比較答案的陣列與輸入視窗推送的陣列是否每個索引值[0~3]的每個值是否相等,數字正確位置錯誤為B/數字正確位置正確為A,兩者皆錯為0A0B
+        //輸入視窗輸四位數轉成陣列,且要防呆每一欄數字不可重複,推送到(input_display),針對推進去要去看元素裡的值
+        //EX:p=>p.innerText, input=> class(名稱).value
+        enter.addEventListener('click',function(){
+            
+            span()
+            a=0
+            b=0
+        })
+
+
+     
+        
+        function span(){
+            //判別幾位數
+            if(input_answer.value.length!=4){
+                alert("請輸入四位數")
+                input_answer.value = "";
+                return;
+                
+            }
+            //防呆只能輸入數字在html型別裡 輸入 onkeyup="this.value=this.value.replace(/[^\d]/g,'')" 限制輸入的格式       
+            let p = document.createElement("p")
+            let div = document.createElement("div")
+
+           
+            //AB比較
+            let  arr2 = Array.from(input_answer.value)
+            //寫法一
+            // for( let i = 0; i<answer.length;i++){
+            //     if(answer[i] == arr2[i]){
+            //         a++
+            //     }
+            //     else{
+            //         for(let j=0;j<answer.length;j++){
+            //             if(answer[i] == arr2[j] && answer[i]!=arr2[i]){
+            //                 b++
+            //             }
+            //         }
+            //     }
+            // }
+            
+            //寫法二
+            //answer 亂數答案
+            //arr2   推上去的答案
+            
+            for(var ans in answer){
+                if(arr2.indexOf(`${answer[ans]}`) != -1){
+                    b++;
+                    if(arr2.indexOf(`${answer[ans]}`)==ans){
+                        a++
+                        b--
+                    }
+                  
+                }
+                
+                    
+                
+
+            }
+
+            let AB = document.createElement('p')
+            AB.innerText = `${a}A${b}B`
+            AB.style.borderRadius='10px'
+            
+            
+            if(b!=0 ){
+                AB.style.backgroundColor = "red"
+                
+
+            }
+            else{
+                AB.style.backgroundColor = "green"
+            }
+
+            p .innerText= input_answer.value
+            div.style.display = "flex"
+            div.style.justifyContent = "center"
+            div.append(AB,p)
+            input_display.append(div)
+           
+           
+
+            //多推這一次會讓對話框往上擠
+            
+        }
+            
+            
+        //reste遊戲
+        reset.addEventListener('click',function(){
+            location.reload()
+        })
+        //防呆功能
+
+        //解答
+        show_answer.addEventListener('click',function(){
+            alert(
+                `答案為${answer}`
+                )
+        })
+
+
+
+    </script>
+
+    
+  </body>
+</html>
+            
+       
+            
+            
+            
+            
+            
+
+                     
+             
+               
+           
+            
+            
+        
+
+
+            
+            
+
+            
+            
+            
+            
+
+
+
+
+
+        
+       
+        
+        
+
+
+
+
