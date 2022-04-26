@@ -138,7 +138,11 @@
                 return;
                 
             }
-            //防呆只能輸入數字在html型別裡 輸入 onkeyup="this.value=this.value.replace(/[^\d]/g,'')" 限制輸入的格式       
+            //防呆只能輸入數字在html型別裡 輸入 onkeyup="this.value=this.value.replace(/[^\d]/g,'')" 限制輸入的格式    
+            
+            //防呆如果輸入重複數字跳出
+            repeat()
+            
             let p = document.createElement("p")
             let div = document.createElement("div")
 
@@ -209,7 +213,18 @@
         reset.addEventListener('click',function(){
             location.reload()
         })
-        //防呆功能
+        /**
+         * 防止數字重複輸入
+         * */
+        function repeat(){
+            for(var repeat in input_answer){
+                if(input_answer[repeat]==input_answer[repeat]){
+                    alert("請勿重複輸入數字")
+                    return;
+                }
+
+            }
+        }
 
         //解答
         show_answer.addEventListener('click',function(){
@@ -226,7 +241,7 @@
   </body>
 </html>
             
-       
+       ()
             
             
             
