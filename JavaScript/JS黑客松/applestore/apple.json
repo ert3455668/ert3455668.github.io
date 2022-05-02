@@ -1,17 +1,13 @@
 {
-    "product":{
-        "ipadAir":{
+    "ipadAir":{
             "ColorList":[
-                {"color": "天藍色","value":	"#84C1FF","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/blue.png"},
+                {"color": "天藍色","value":"#84C1FF","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/blue.png"},
                 {"color": "銀色","value":"#5B5B5B","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/gray.png"},
                 {"color": "太空灰色","value":"#8E8E8E","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/gray.png"},
                 {"color": "玫瑰金色","value":"#84C1FF","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/rose.png"},
                 {"color": "金色","value":"#EAC100","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/silver.png"}
-                
+
 
             ]
         }
-
-       
-    }
 }
