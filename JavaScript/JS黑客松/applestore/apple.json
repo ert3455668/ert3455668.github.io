@@ -1,23 +1,26 @@
 {
     "ipadAir":{
         "ColorList":[
-            {"color":"銀色","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/ipad-air-select-cell-purple.png"},
-            {"color":"天藍色","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/blue.png"},
-            {"color":"玫瑰金","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/rose.png"},
-            {"color":"太空灰","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/gray.png"},
-            {"color":"金色","imageUrl":"http://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/silver.png"}
+            {"color":"銀色","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/ipad-air-select-cell-purple.png","pic":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-silver-2021?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1629940690000"},
+            {"color":"天藍色","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/blue.png","pic":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-blue-202203?wid=208&amp;hei=208&amp;fmt=jpeg&amp;qlt=90&amp;.v=1645072286826"},
+            {"color":"玫瑰金","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/rose.png","pic":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-pink-202203?wid=208&amp;hei=208&amp;fmt=jpeg&amp;qlt=90&amp;.v=1645072286848"},
+            {"color":"太空灰","imageUrl":"https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/gray.png","pic":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-spacegray-202203?wid=208&amp;hei=208&amp;fmt=png-alpha&amp;.v=1645072286860"},
+            {"color":"金色","imageUrl":"http://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/silver.png","pic":"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-gold-2021?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1629940690000"}
            
-            ],
-            "Specification":["64GB","128GB","256GB"]
-          
-        },
-        "ipadPro":{ 
-            "ColorList":["太空灰","銀色","天藍色","玫瑰金","金色"],
-            "Specification":["64GB","128GB","256GB"]
-         }
+        ],
+        "Specification":["64GB","128GB","256GB"]
+        
+           
+       
+           
+     
+    },
+    "ipadPro":{ 
+        "ColorList":["太空灰","銀色","天藍色","玫瑰金","金色"],
+        "Specification":["64GB","128GB","256GB"]
+    }
 }
 
-           
        
            
    
