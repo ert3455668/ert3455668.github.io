@@ -9,10 +9,10 @@
            
         ],
         "Specification":[
-            {"phone capacity":"64GB","network":"wifi","price":"17,900"},
-            {"phone capacity":"64GB","network":"wifi+LTE","price":"22,900"},
-            {"phone capacity":"128GB","network":"wifi","price":"22,900"},
-            {"phone capacity":"128GB","network":"wifi+LTE","price":"27,900"}                                                                                     
+            {"phone_capacity":"64GB","network":"wifi","price":"17,900"},
+            {"phone_capacity":"64GB","network":"wifi+LTE","price":"22,900"},
+            {"phone_capacity":"128GB","network":"wifi","price":"22,900"},
+            {"phone_capacity":"128GB","network":"wifi+LTE","price":"27,900"}                                                                                     
         ]
     },
     "ipadPro":{ 
