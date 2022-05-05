@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://kit.fontawesome.com/022bd99b02.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="applestore.css">
+    <title>apple store</title>
+    
+</head>
+
+<body>
+    <div class="col-12">
+        <header>
+            <marquee onMouseOver="this.stop()" onMouseOut="this.start()">跑馬燈測試</marquee>
+            <nav class="navbar navbar-light bg-dark col-12 ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <i class="fa-brands fa-apple"></i> 
+                    </a>
+                    <button type="button" class="btn btn-secondary ipadAir">ipad Air</button>
+                    <button type="button" class="btn btn-secondary ipadPro">ipad Pro</button>
+                    <button type="button" class="btn btn-secondary iphone">iphone</button>
+                </div>
+            </nav>
+        </header>
+
+        <body>
+            <div class="row mt-5 p-1">
+                <div class="left col-6">
+                    <marquee scrollamount="10" onMouseOver="this.stop()" onMouseOut="this.start()">
+                        <img src="" id="leftimg">
+                    </marquee>
+                    
+                </div>
+                <div class="right col-6">
+                    <div class="top">
+                        <p class="color_text"></p>
+                        <div class="colo_btnlist"></div>
+                    </div>
+                    <div class="body">
+                        <p class="Specification_text"></p>
+                        <div class="Specification_btnlist"></div>
+                    </div>
+                    <div class="footer">
+                        <p class="price_text"></p>
+                        <p class="productprice"></p>
+                    </div>
+                    
+                   
+
+                </div> 
+            </div>
+        </body>
+                    
+                    
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+        </script>
+
+
+    <script>
+
+        let ipadAir = document.querySelector(".ipadAir")
+        let ipadPro = document.querySelector(".ipadPro")
+        let iphone = document.querySelector(".iphone")
+        let leftimg = document.querySelector("#leftimg")
+        let right = document.querySelector(".right")
+        let color_text = document.querySelector(".color_text")
+        let Specification_text = document.querySelector(".Specification_text")
+        let price_text = document.querySelector(".price_text")
+        let color = document.querySelector(".colo_btnlist")
+        let body  = document.querySelector(".Specification_btnlist")
+        let footer = document.querySelector(".footer")
+        let productprice = document.querySelector(".productprice")
+        let product = document.querySelector(".product")
+        let appleDataObj
+        let applearray
+        
+        
+        const url = "https://raw.githubusercontent.com/ert3455668/ert3455668.github.io/main/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/apple.json";
+        let xhr = new XMLHttpRequest();
+        window.onload = function () {
+            requestJSON1();
+        }
+        function requestJSON1() {
+            xhr.onload = function () {
+                //JSON檔解析
+                appleDataObj = JSON.parse(this.response);
+                
+
+                //var keys = Object.keys(appleDataObj)
+                // keys.forEach( key => {
+                     //造出一個產品線按鈕
+
+                //     //按鈕的點擊事件
+                    
+                //     {}
+                //     let 我要的資料 = appleDataObj[key]
+                // })
+
+            }
+            xhr.open("GET", url);
+            xhr.send();
+        }
+        
+
+        ipadAir.addEventListener('click', function () {
+            leftimg.setAttribute("src", "https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/applestore/ipad-air-select.jpg")
+            //初始化
+            color.innerText= ""
+            body.innerText = ""
+            //把物件把陣列
+            applearray = appleDataObj.ipadAir
+
+            let colorlist= applearray.ColorList
+            let Specification = applearray.Specification
+            // colorlist轉陣列用迴圈把每個物件帶出來
+            Specification_text.innerText = "規格" 
+            color_text.innerText = "顏色"
+            price_text.innerText = "價格試算"
+            
+           
+            
+            colorlist.forEach((item, index) => { 
+                //每一圈創造了三個tag(button,span,img)
+                let btn = document.createElement("button")
+                let span = document.createElement("span")
+                let img = document.createElement("img")
+                // color_text.innerText = item.title
+                //把class名稱塞進去
+                btn.setAttribute("class", "btn color_btn")
+                //把圖片塞進去按鈕
+                img.setAttribute("src",item.pic)
+                //把物件裡的顏色名稱塞塞進去button裡的span
+                span.innerText = item.color
+                
+               
+                //監聽點擊事件案道不同顏色就把對應的圖片塞進去左邊的照片裡
+                btn.addEventListener('click',function(){
+                    leftimg.setAttribute("src", item.imageUrl)
+                })
+                //span在塞進去btn按鈕裡面
+                btn.append(img,span)
+                color.append(btn)
+            });
+            Specification.forEach((item,index) => {
+                
+                let btn = document.createElement("button")
+                let p = document.createElement("p")
+                btn.setAttribute("class", "btn Specification_btn")
+                p.innerText = item.network
+                btn.innerHTML =item.phone_capacity 
+                btn.addEventListener('click',function(){
+                    productprice.innerText = item.price
+                    
+                })
+                
+                btn.append(p)
+                body.append(btn)
+
+            });
+
+          
+
+
+            // let z = Object.values(colorlist[0])
+            // console.log(z[0].length); 
+            // for (const item in z.length) {
+            //     console.log(z[o][item]);
+            // }
+
+            
+            
+          
+        });
+
+    </script>
+
+</body>
+
+</html>
