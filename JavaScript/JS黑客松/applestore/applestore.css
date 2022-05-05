@@ -1,0 +1,78 @@
+#leftimg {
+    width: 70%;
+    
+    
+}
+.fa-apple{
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    border-radius: 20px;
+    color: white;
+    background-color: transparent;
+}
+    
+    
+    
+     
+    
+.navbar-brand{
+    text-align: center;
+}
+
+
+  
+  .fa-apple:hover {
+
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    
+            }
+      
+  
+  
+
+.left{
+    text-align: center;
+    margin: auto;
+}
+marquee{
+    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1)
+}
+.color_btn{
+    border: 1px solid  #ccc;
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    
+}
+   
+.color_btn:hover{
+    border: 1px solid  red;
+    
+}
+.color_btn img{
+    width: 80%;
+    padding: 10px;
+}
+.Specification_btn{
+    border: 1px solid #ccc;
+    width: 100px;
+}
+.Specification_btn:hover{
+    color: blue;
+    
+}
+.color_text,
+.Specification_text,
+.price_text{
+    font-size: 30px;
+}
+.productprice{
+    font-size: 40px;
+}
