@@ -164,12 +164,13 @@
         let dataObj
         let heroArray =[]
         let container;
-        let btnListHero, btnTableHero,btnCardHero;
+        
         
        
         
         let row = document.querySelector(".row")
         let cardTemplate = document.querySelector("#cardTemplate")
+        let cardbtn = document.querySelector("#cardhero")
         //Json宣告
         
         const url = "https://raw.githubusercontent.com/ert3455668/ert3455668.github.io/main/JavaScript/Json/champion.json"        
@@ -198,7 +199,10 @@
                         
                         
                     // })
-                    row.append(getCard(item.id, item.name,item.blurb,item.stats.hp,item.stats.movespeed,item.stats.armor,item.stats.spellblock,item.stats.attackrange,item.tags))
+                    cardbtn.addEventListener('click',function(){
+                        row.append(getCard(item.id, item.name,item.blurb,item.stats.hp,item.stats.movespeed,item.stats.armor,item.stats.spellblock,item.stats.attackrange,item.tags))
+                    })
+                    
                
                         
                         
@@ -208,23 +212,9 @@
         }
         xhr.open("GET",url)
         xhr.send();
-        
-                   
-                    
-                    
-                
-                
-                
-                
-
-        
         //ID+name
         //介紹blurb
         //圖片"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/{Aatrox_0}.jpg"
-       
-        
-       
-
         function getCard(id, name,blurb,hp,movespeed,armor,spellblock,attackrange,tags) {
                 let cloneCard = cardTemplate.content.cloneNode(true);
                 cloneCard.querySelector(".card-img-top").src =`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`
@@ -263,12 +253,25 @@
             let modal = document.querySelector("#videoModal")
             modal.querySelector("iframe").src = `https://www.youtube.com/embed/hlalkAUkwqE`
         }
+    </script>
+</body>
+
+</html>
             
             
             
             
         
-    </script>
-</body>
+        
+                   
+                    
+                    
+                
+                
+                
+                
 
-</html>
+        
+       
+        
+       
