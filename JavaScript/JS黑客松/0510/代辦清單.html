@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <style>
+        .btn_save{
+            display: none;
+        }
+
+    </style>
+    <title>To-do list</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="textin" value="" aria-label="請輸入代辦事項" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary add_list" type="button" id="button-addon2">新增</button>
+        </div>
+        <div class="group"></div>
+        
+        
+        
+        <template  id="to_do_list">
+            <div class="input-group mb-3 list ">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                </div>
+                <input type="text" class="form-control input_text edit" id="edit" aria-label="Text input with checkbox" disabled="disabled">
+                <button type="button" class="btn btn-success btn_save ">保存</button>
+                <button type="button" class="btn btn-warning btn_edit ">編輯</button>
+                <button type="button" class="btn btn-danger btn_del">刪除</button>
+            </div>
+        </template>
+
+    </div> 
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        //全域
+        let container = document.querySelector(".container");
+        let textin= document.querySelector("#textin").value;
+        let to_do_list = document.querySelector("#to_do_list");
+        let group =document.querySelector(".group");
+        //值轉 物件>>>再轉文字>>>setitem
+        
+        
+        
+        //按鈕
+        let add_list = document.querySelector(".add_list")
+        let btn_edit = document.querySelector(".btn_edit");
+        let btn_save = document.querySelector(".btn_save");
+ 
+        //localstorage
+        let dataArray=[]
+        
+        let key  = dataArray
+        index = 0
+        idnumber = 0
+        
+        
+        //重整載入
+        window.onload =function(){
+            
+            // localStorage.getItem(JSON.parse(dataArray))
+           
+            
+            load()
+            
+        
+
+        }
+        //新增清單,寫入localstroage
+        add_list.addEventListener('click',function(){
+            let textin= document.querySelector("#textin").value;
+
+            var data={
+                id:idnumber+1,
+                content:textin,
+                status:false
+            }
+            dataArray.push(data);
+            //localStorage存入key=list
+            localStorage.setItem("list",JSON.stringify(dataArray));
+            group.appendChild(clone(textin));
+            
+            
+
+        });
+        
+        function load(){
+            //
+            let data=JSON.parse(localStorage.getItem("list"));
+
+            if( data!=null){
+                dataArray=data;
+                for (const item of dataArray) {
+                    group.append(clone(item.content));
+
+                }
+                
+            }      
+        }
+
+      
+
+        
+        
+
+        function clone(text){
+            idnumber++
+            
+            let clone_list = to_do_list.content.cloneNode(true)
+            clone_list.querySelector(".list").setAttribute("id",idnumber)
+            clone_list.querySelector(".form-check-input")
+            clone_list.querySelector(".input_text").value=text
+            clone_list.querySelector(".input_text").classList.add("input"+idnumber)
+            var a = clone_list.getElementById(idnumber)
+            var b= clone_list.querySelector("#edit")
+            var c = clone_list.querySelector(".btn_edit")
+            var d = clone_list.querySelector(".btn_save")
+            d.setAttribute("save-id",idnumber)
+            var delbtn=clone_list.querySelector(".btn_del")
+            delbtn.setAttribute("data-id",idnumber)
+
+            clone_list.querySelector(".btn_edit").addEventListener('click',function(){
+                b.disabled = false
+                c.style = "display: none"
+                d.style = "display: block"                   
+            });
+            
+            clone_list.querySelector(".btn_del").addEventListener('click',  function(e){      
+                
+                var targetID=e.target.getAttribute("data-id")
+                    //linq 概念
+                    var target=dataArray.findIndex(item=>item.id==targetID);
+                    console.log(target);
+                    // console.log(dataArray[target]);
+                    dataArray.splice(target, 1);
+                    localrefresh(dataArray);
+                    a.remove()
+            });
+                    
+
+            clone_list.querySelector(".btn_save").addEventListener('click',  function(e){     
+                var targetID=e.target.getAttribute("save-id")
+                var input=document.querySelector(".input"+targetID)
+                console.log(input)
+                b.disabled = true 
+                c.style = "display:block"
+                d.style = "display: none"
+                var target=dataArray.findIndex(item=>item.id==targetID);
+                console.log(input.value);
+                dataArray[target].content=input.value;
+
+                localrefresh(dataArray)
+                
+            });
+            return clone_list
+        }
+               
+
+                
+
+                
+        
+        function edit(){
+            
+            document.querySelector("#edit").disabled = false
+            console.log(document.querySelector("#edit").disabled = false);
+            
+        }
+        function localrefresh(arr){
+            var data=JSON.stringify(arr);
+            localStorage.setItem("list",data);
+        }
+       
+           
+                
+            
+    </script>
+
+   
+  </body>
+</html>
