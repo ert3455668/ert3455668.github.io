@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="123.css">
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        img{
+            display: flex;
+            
+        }
+        .container div:nth-child(2){
+            position: absolute;
+            animation: animate1 1.5s linear infinite;
+            transform-origin: 50% 52%;
+        }
+             
+            
+        .container div:nth-child(3){
+            position: absolute; 
+            animation: animate 4s linear infinite;
+            transform-origin: 30% 50%;
+        }
+
+         @keyframes animate {
+        0%{
+            transform: rotateX(0deg)rotateY(0deg)
+        }
+        100%{
+            transform: rotateX(0deg)rotateY(1070deg)
+            
+        }
+        
+        
+    } 
+    @keyframes animate1 {
+        0%{
+            transform: rotateX(0deg)rotateY(0deg)
+        }
+        100%{
+            transform: rotateX(1000deg)rotateY(0deg)
+            
+        }
+        }
+        .star{
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="star"></div>
+    <div class="meteor-1"></div>
+    <div class="meteor-2"></div>
+    <div class="meteor-3"></div>
+    <div class="meteor-4"></div>
+    <div class="meteor-5"></div>
+    <div class="meteor-6"></div>
+    <div class="meteor-7"></div>
+    <div class="meteor-8"></div>
+    <div class="meteor-9"></div>
+    <div class="meteor-10"></div>
+    <div class="meteor-11"></div>
+    <div class="meteor-12"></div>
+    <div class="meteor-13"></div>
+    <div class="meteor-14"></div>
+    <div class="meteor-15"></div>
+    <div class="container">
+        <div>
+            <img src="/研究/CSS特效/fpBhzJi2.png" alt="">
+        </div>
+        <div>
+            <img src="/研究/CSS特效/fpBhzJi 1.png" alt="">
+        </div>
+        <div>
+            <img src="/研究/CSS特效/fpBhzJi.png" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
