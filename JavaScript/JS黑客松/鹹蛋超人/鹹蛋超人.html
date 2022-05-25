@@ -32,15 +32,17 @@
         }
         .container div:nth-child(4){
             position: absolute; 
-            animation: animate 10s linear infinite;
+            animation: animate2 10s linear infinite;
             transform-origin: 55% 50%; 
         }
          @keyframes animate {
         0%{
-            transform: rotateX(0deg)rotateY(0deg)
+            transform: rotateX(0deg)rotateY(0deg);
+            
+            
         }
         100%{
-            transform: rotateX(0deg)rotateY(1070deg)
+            transform: rotateX(0deg)rotateY(1070deg);
             
         }
         
@@ -54,17 +56,68 @@
             transform: rotateX(1000deg)rotateY(0deg)
             
         }
+    }
+            
+    @keyframes animate2 {
+            0%{
+                transform: rotateX(0deg)rotateY(0deg)
+            }
+            100%{
+                transform: rotateX(0deg)rotateY(1070deg)
         }
-        .star{
-            position: relative;
-            z-index: 10;
+
+    
+    }
+    .light1{
+        filter: blur(20px);
+        position: absolute;
+        animation: animate3 1s linear infinite ;
+        z-index: 10;
+        top: 650px;
+        left: 1020px;
+        
+        
+        
+    }
+    @keyframes animate3 {
+        0%{
+            box-shadow:  0 0 0px 0px rgba(211, 211, 211.2);
+                        
+                        
+            
         }
+        25%{
+            box-shadow:  0 0 0px 10px rgba(205, 92, 92.4);
+                        
+        }
+        50%{
+            box-shadow:  0 0 0px 15px rgba(165, 42, 42.6);
+                        
+        }
+        75%{
+            box-shadow:  0 0 0px 25px rgba(255, 0, 0.7);
+                        
+        } 
+                        
+            
+        
+        100%{
+              
+            box-shadow: 0 0 10px 30px rgba(255, 0, 0.8);
+                               
+                        
+        } 
+     }
+    .star{
+        position: relative;
+        z-index: 10;
+    }
 h1{
     color:#333;
-    font-size:8rem;
+    font-size:50px;
     position: absolute;
-    top: 20px;
-    left: 1500px;
+    top: 100px;
+    left: 1300px;
     z-index: 2;
 }
 
@@ -74,7 +127,7 @@ h1::after{
     font-family: 'Font Awesome 6 Free';
     color:transparent;
     position:absolute;
-    left: -115px;
+    left: -45px;
     top:0;
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     background-clip:text;
@@ -137,14 +190,18 @@ h1::after{
         </div>
         <div>
             <img src="https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi%201.png" alt="">
+            
         </div>
         <div>
             <img src="https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi.png" alt="">
+            
         </div>
         <div id="box">
             <img src="https://raw.githubusercontent.com/ert3455668/ert3455668.github.io/main/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi3.png" alt="">
         </div>
         <h1>請移動頭部</h1>
+        <div class="light1"></div>
+        
         
     </div>
     <script>
