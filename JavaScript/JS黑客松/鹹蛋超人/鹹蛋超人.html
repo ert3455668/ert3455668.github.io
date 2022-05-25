@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="123.css">
+    <script src="https://kit.fontawesome.com/022bd99b02.js" crossorigin="anonymous"></script>
     <style>
         .container{
             display: flex;
@@ -20,16 +21,20 @@
         .container div:nth-child(2){
             position: absolute;
             animation: animate1 1.5s linear infinite;
-            transform-origin: 50% 52%;
+            transform-origin: 50% 52%; 
         }
              
             
         .container div:nth-child(3){
             position: absolute; 
             animation: animate 4s linear infinite;
-            transform-origin: 30% 50%;
+            transform-origin: 30% 50%; 
         }
-
+        .container div:nth-child(4){
+            position: absolute; 
+            animation: animate 10s linear infinite;
+            transform-origin: 55% 50%; 
+        }
          @keyframes animate {
         0%{
             transform: rotateX(0deg)rotateY(0deg)
@@ -54,9 +59,61 @@
             position: relative;
             z-index: 10;
         }
+h1{
+    color:#333;
+    font-size:8rem;
+    position: absolute;
+    top: 20px;
+    left: 1500px;
+    z-index: 2;
+}
+
+h1::after{
+    content:"\f100 高歌離席";
+    font-weight: 900;
+    font-family: 'Font Awesome 6 Free';
+    color:transparent;
+    position:absolute;
+    left: -115px;
+    top:0;
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    background-clip:text;
+    -webkit-background-clip: text;
+    clip-path:circle(100px at 0% 50%);
+    z-index: 2;
+   
+    animation:light 5s infinite;
+}
+/* h2::before{
+    content: "\f100";
+
+    color: red;
+    font-size: 300px;
+    font-weight: 900;
+    font-family: 'Font Awesome 6 Free';
+    background-color: white;
+} */
+
+
+
+@keyframes light{
+    0%{
+        clip-path:circle(100px at 0% 50%);
+        
+    }
+    50%{
+        clip-path:circle(100px at 100% 50%);
+        
+    }
+    100%{
+        clip-path:circle(100px at 0% 50%);
+        
+    }
+}
     </style>
 </head>
 <body>
+    
     <div class="star"></div>
     <div class="meteor-1"></div>
     <div class="meteor-2"></div>
@@ -74,8 +131,9 @@
     <div class="meteor-14"></div>
     <div class="meteor-15"></div>
     <div class="container">
+        
         <div>
-            <img src="https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi2.png" alt="">
+            <img src="https://raw.githubusercontent.com/ert3455668/ert3455668.github.io/main/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi2.png" alt="">
         </div>
         <div>
             <img src="https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi%201.png" alt="">
@@ -83,7 +141,28 @@
         <div>
             <img src="https://ert3455668.github.io/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi.png" alt="">
         </div>
+        <div id="box">
+            <img src="https://raw.githubusercontent.com/ert3455668/ert3455668.github.io/main/JavaScript/JS%E9%BB%91%E5%AE%A2%E6%9D%BE/%E9%B9%B9%E8%9B%8B%E8%B6%85%E4%BA%BA/fpBhzJi3.png" alt="">
+        </div>
+        <h1>高歌離席</h1>
+        
     </div>
-    
+    <script>
+        //忍術
+        var box = document.getElementById("box");
+
+
+        box.onmousedown = function (e){
+            document.onmousemove = function(x){
+                box.style.top = x.clientY-e.offsetY+"px";
+                box.style.left = x.clientX-e.offsetX+"px"; 
+            }
+            
+            document.onmouseup = function(e){
+                document.onmousemove = null;
+                document.onmouseup = null;
+            }
+        }
+    </script>
 </body>
 </html>
