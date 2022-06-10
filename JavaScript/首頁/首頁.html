@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./home.css">
+    <title>論壇區塊</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-box">
+            <nav class="header-box-nav">
+                <div class="header-box-nav-content">
+                    <button class="btn header-box-nav-content-collapse">
+                        <ion-icon class="icon" name="arrow-back-outline"></ion-icon>
+                    </button>
+                    <ul class="list-group header-box-nav-content-tours">
+                        <li class="list-tour-home" style="--clr:#f44336">
+                            <a href="#home">
+                                <span class="icon">
+                                    <ion-icon name="home-outline"></ion-icon>
+                                </span>
+                                <span>首頁</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-shop" style="--clr:#ffa500">
+                            <a href="#shop">
+                                <span class="icon">
+                                    <ion-icon name="storefront-outline"></ion-icon>
+                                </span>
+                                <span>商店</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-game" style="--clr:#FFD700">
+                            <a href="#game">
+                                <span class="icon">
+                                    <ion-icon name="game-controller-outline"></ion-icon>
+                                </span>
+                                <span>遊戲庫</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-forum active" style="--clr:#0fc70f">
+                            <a href="#forum">
+                                <span class="icon">
+                                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                                </span>
+                                <span>論壇</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-friend " style="--clr:#2196f3">
+                            <a href="#friend">
+                                <span class="icon">
+                                    <ion-icon name="people-outline"></ion-icon>
+                                </span>
+                                <span>好友</span>
+                            </a>
+                        </li>
+                        <li class="list-tour-about" style="--clr:#b145e9">
+                            <a href="#about">
+                                <span class="icon">
+                                    <ion-icon name="help-circle-outline"></ion-icon>
+                                </span>
+                                <span>關於我們</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-box-tool">
+                <div class="nav-toggler"></div>
+                <a href="#LOGO" class="navbar-brand logo h1">SOLO GAME</a>
+                <form class="form-inline search-form">
+                    <input class="form-control " type="search"  placeholder="搜尋" >
+                    <button class="btn search-form-btn" type="button"></button>
+                </form>
+                <div class="navbar-brand header-box-tool-end">
+                    <div class="dropdown">
+                        <button class="bell" type="button" id="bell-list" data-toggle="dropdown"
+                            aria-expanded="false" data-offset="-120,0"></button>
+                        <div class="dropdown-menu" aria-labelledby="bell-list">
+                            <div href="#" class="dropdown-item">訊息1</div>
+                            <div href="#" class="dropdown-item">訊息2</div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="login" type="button" id="user-list" data-toggle="dropdown"
+                            aria-expanded="false" data-offset="-120,0"></button>
+                        <div class="dropdown-menu" aria-labelledby="user-list">
+                            <a href="#" class="dropdown-item">註冊登入</a>
+                            <a href="#" class="dropdown-item">個人資料</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main id="forum" class="container-fluid">
+        <ul class="list-unstyled page-nav">
+            <li class="page-nav-item active">所有看板</li>
+            <li class="page-nav-item">我的看板</li>
+            <li class="page-nav-item">我的遊戲</li>
+            <li class="page-nav-item">動態</li>
+        </ul>
+        <div class="main">
+            <!-- 用row或col會破壞z-index的顯示 -->
+            <div class="col">
+                card
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cdc90ce112.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./forum.js"></script>
+</body>
+
+</html>

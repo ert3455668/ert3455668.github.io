@@ -1,0 +1,287 @@
+:root{
+
+    --header-body-color:rgba(45, 45, 45,0.9);
+    --background-color:rgba(252, 252, 252, 0.15);
+    
+    --text-color:rgba(204,204,204.0);
+    --dynamic-wall-background:rgba(244,244,244.0);
+    --dynamic-wall-border:rgba(128,128,128,0.5);
+}
+body{
+    font-size: 18px;
+    background-color: var(--background-color);
+}
+
+header{
+    height: 65px;
+    background-color: var(--header-body-color);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+}
+
+.header-hb{
+    display: flex;
+    flex-direction: column;
+}
+.header-body  span{
+    height: 2px;
+    width: 50px;
+    border-bottom: 3px solid rgb(221, 18, 18);
+    margin:13px 0 0 10px;  
+}
+.header-nav{
+    display: none;
+    background-color: var(--header-body-color);
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    top: 65px;
+    z-index: 1;
+    color:var(--text-color) ;
+    
+}
+.header-nav ul{
+    padding: 20px 20px;
+    
+}
+.header-nav a{
+    padding: 20px 20px;
+    display: block;
+
+    color: var(--text-color);
+    
+    
+}
+.community-body{
+    margin: 20px 20px;
+    display: flex;
+    flex-wrap: wrap ;
+    flex-direction: column;
+    position: relative;
+    
+    
+    
+}
+.community-body-dynamics{margin-top: 10px;}
+.community-body-populargames{
+    display: none;
+}
+.community-body-searchbox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+
+    
+    
+}
+.community-body-searchbox input{
+    border-radius: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+    
+
+}
+.community-body-forum{
+    
+    width: 100%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    align-items: center;
+
+}
+.card:hover{
+    background-color:var(--background-color);
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+.sticky{
+    display: none;
+}
+.totop::before
+{
+    content: '\f102';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900; 
+    position: absolute;
+    bottom: 20px;
+    font-size: 50px;
+    color: black;
+    
+}
+.community-body-screensharing-top{
+    display: flex;
+    flex-wrap: wrap;
+}
+.screensharing-card img{
+    width: 100%;
+}
+.community-body-screensharing-top{
+    display: flex;
+    flex-wrap: wrap;
+}
+.community-body-screensharing-down{
+    display: flex;
+
+}
+.community-body-swiper{
+    display: none;
+}
+.community-body-right{
+    display: none;
+} 
+
+
+
+
+    
+    
+    
+    
+
+    
+
+
+@media screen and (min-width:768px){
+    .header-body{
+        max-width: 1200px;
+        position: relative;
+        margin: auto;
+
+    }
+    .header-hb{
+        display: none;
+        
+        
+    }
+    
+    
+    
+    .header-nav{
+        background-color: transparent;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        z-index: 1;
+        
+
+        
+        
+    }
+    .header-nav ul{
+        margin: 4px 0 ;
+    }
+    .community-body-searchbox{
+        flex-direction: row;
+        
+    }
+   
+    
+}
+
+@media screen and (min-width:1024px){
+    .community-body-dad{
+        max-width: 1200px;
+        justify-content: end;
+        margin: auto;
+
+    }
+    .community-body{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        
+        
+        
+        
+        
+        
+    }
+    .community-body-populargames{
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+
+}
+.community-body-populargames-card{
+    width:50% ;
+    display: flex;
+    padding: 10px 10px;
+}
+.community-body-populargames-card p {
+    display: block;
+    font-size: 0.5em;
+}
+.community-body-searchbox{
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.card{
+    flex-direction: row;
+    padding: 50px;
+}
+.sticky{
+    display: block;
+    width: 100%;
+    height: 500px;
+    background-color: var(--sticky-background);
+    position: sticky;
+    top: 100px;
+    
+    
+   
+    
+}
+.community-body-dad{
+    margin-top: 65px;
+}
+.community-body-right{
+    display: block;
+} 
+
+.screensharing-card img{
+    width: 100%;
+}
+.swiper {
+    width: 870px;
+    height: 400px;
+    
+} 
+.swiper img{
+    width: 100%;
+} 
+.community-body-swiper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	position: relative;
+}
+	
+	
+	
+
+
+    
+    
+
+
+
+
+
+}

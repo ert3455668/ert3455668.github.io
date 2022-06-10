@@ -1,0 +1,43 @@
+@import '_navbar.scss';
+
+#forum{
+    border-left:0px solid transparent;
+    height: 100vh;
+    background: $color-bg;
+    width: auto;
+    transition: all 0.5s;
+    // &.hide{
+    //     border-left:0px solid transparent;
+
+    // }
+    // @include pad{
+    //     border-left:55px solid transparent;
+        
+    //     &.open{
+    //         border-left: $nav-max-width solid transparent;
+
+    //     }
+    // }
+    .page-nav{
+        display: flex;
+        justify-content: center;
+        background: $color-main;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 10px;
+
+        &-item{
+            font-size: 1rem;
+            margin:  0 1px;
+            padding: 5px 10px ;
+            border-radius: 1rem;
+            background:#373737 ;
+            color: $color-li-text;
+            &.active{
+                color: $color-main;
+                background:#f8f9fa ;
+            }
+        }
+
+    }
+}

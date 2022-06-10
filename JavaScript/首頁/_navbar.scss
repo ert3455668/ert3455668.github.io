@@ -1,0 +1,320 @@
+@import '_mixin.scss';
+@import '_variable.scss';
+
+.font-icon {
+    color: $color-secondary;
+
+    &::before {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        text-align: center;
+    }
+}
+
+.header {
+    height: $header-height;
+
+    .header-box {
+        width: 100%;
+        height: $header-height;
+        background: $color-main;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        border-bottom: 1px $color-secondary solid;
+
+        &-nav {
+            height:calc(100vh - #{$header-height});
+            width: 100%;
+            z-index: 1000;
+            position: fixed;
+            top: $header-height;
+            left: 0px;
+
+            @include mobile {
+                width: auto;
+            }
+            .closenav{
+                transform:translateX(-67px);
+            }
+                
+            
+
+            &-content {
+                position: relative;
+                z-index: 1001;
+                width: 60px;
+                height: 100%;
+                background-color: $color-text;
+                border-right: 3px solid #d1d1d1;
+                transition: all 0.5s;
+                padding-top: 10px;
+                padding-bottom: 60px;
+                transform:translateX(-67px);
+
+                @include mobile{
+                    transform:translateX(0px);
+                }
+              
+
+
+                &-collapse {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    font-size: 1.5em;
+                    display: none;
+                    @include mobile{
+                        display: block;
+                    }
+                }
+                .roate{
+                    transform: rotate(180deg);
+                }
+
+                &-tours {
+                    list-style-type: none;
+                    gap: 10px;
+
+                    li {
+                        position: relative;
+                        width: 100%;
+                        padding: 0px 10px;
+                        transition: all 0.5s;
+
+                        a {
+                            height: 40px;
+                            position: relative;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            text-align: center;
+                            color: $color-main;
+                            // color: black;
+                            text-decoration: none;
+
+                            .icon {
+                                font-size: 1.25em;
+                                position: relative;
+                                display: block;
+                                min-width: 35px;
+                                height: 35px;
+                                line-height: 38px;
+                                transition: all 0.5s;
+                                border-radius: 10px;
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: var(--clr);
+                                    filter: blur(5px);
+                                    opacity: 0;
+                                    transition: all 0.5s;
+                                }
+
+                                &~span {
+                                    min-width: 150px;
+                                    position: relative;
+                                    padding: 0 15px;
+                                    display: flex;
+                                    align-items: center;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                }
+                            }
+                        }
+
+                        &.active,
+                        &:hover {
+                            transform: translateX(20px);
+
+                            .icon {
+                                color: $color-third;
+                                background: var(--clr);
+
+                                &:before {
+                                    opacity: 0.8;
+                                }
+
+                                &~span {
+                                    opacity: 1;
+                                    color: var(--clr);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-tool {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+
+            .logo {
+                margin: 0 20px;
+                color: $color-third;
+                text-shadow: 3px 2px 5px $color-third;
+                transition: all .5s ease-in-out;
+            }
+            .logomove{
+                position: absolute;
+                left: 70px;
+                transform: translateY(-60px);
+                transition: all .2s ease-in-out;
+                @include mobile{
+                    position: relative;
+                    left: 0px;
+                    transform: translateY(0px);
+                }
+                
+            }
+            
+
+            .nav-toggler {
+                width: $nav-min-width;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &:before,
+                &:after {
+                    content: " ";
+                    width: 30px;
+                    position: absolute;
+                    height: 2px;
+                    background: $color-third;
+                    transition: all 0.5s;
+                }
+
+                &:before {
+                    transform: translateY(-8px);
+                }
+
+                &:after {
+                    transform: translateY(8px);
+                    box-shadow: 0 -8px 0 $color-third;
+                }
+            }
+
+            .search-form {
+                flex: 1;
+                justify-content: flex-end;
+                flex-wrap: nowrap;
+                position: relative;
+                overflow: hidden;
+                .form-control {
+                    width: 100%;
+                    transform: translateX(105%);
+                    transition:all 1s ease-in-out;
+                    
+                }
+                .form-control-open{
+                    transform: translateX(0%);
+                    transition:all 1s ease-in-out;
+                }
+
+                .btn {
+                    position: absolute;
+                    right: 0px;
+                    color: #f8f9fa;
+                    background: $color-main;
+                    border-radius: 0;
+                    @extend .font-icon;
+
+                    &:before {
+                        content: "\f002";
+                    }
+                }
+
+                @include mobile {
+                    .form-control {
+                        // width: auto;
+                        
+                    }
+                    .btn {
+                        position: relative;
+                        // border-top-left-radius: 0;
+                        // border-bottom-left-radius: 0;
+                        // background: #313131;
+                    }
+                }
+            }
+
+            &-end {
+                display: flex;
+                align-items: center;
+
+                button {
+                    border: none;
+                    padding: 0px 15px;
+                    background: $color-main;
+                }
+
+                .bell {
+                    &::before {
+                        @extend .font-icon;
+                        content: "\f0f3";
+                    }
+
+                }
+
+                .login {
+                    &::before {
+                        @extend .font-icon;
+                        content: "\f007";
+                    }
+                }
+
+            }
+        }
+
+        &.open {
+            .header-box-nav {
+                background: rgba(0, 0, 0, 0.5);
+
+                &-content {
+                    width: $nav-max-width;
+
+                    &-tours li.active,
+                    &-tours li:hover {
+                        transform: translateX(10px);
+                    }
+
+                    .icon~span {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .header-box-tool {
+                .nav-toggler {
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        box-shadow: none;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+            .header-box-nav-content{
+                transform: translateX(0px);
+            }
+        }
+    }
+}
