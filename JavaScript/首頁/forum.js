@@ -5,6 +5,8 @@ let searchbtn = document.querySelector(".search-form-btn");
 let hiddenbtn = document.querySelector(".header-box-nav-content-collapse");
 let sidenavbar = document.querySelector(".header-box-nav-content");
 let logo = document.querySelector(".logo");
+let sidenavbaropen = document.querySelector(".sidebar-toggler");
+
 
 //傳入內容區塊做畫面效果
 function Setnavbar(content) {
@@ -17,6 +19,8 @@ function Setnavbar(content) {
         toggler.addEventListener("click", () => {
             navbar.classList.toggle("open");
             document.querySelector(content).classList.toggle("open");
+            // hiddenbtn.style = "display:none"
+            // hiddenbtn.style = "display:block"
             
         })
     }
@@ -31,39 +35,42 @@ function Setnavbar(content) {
         for (var item of list) {
             item.addEventListener("click", ActiveLink);
         }
+        
     }
+   
+    
     
     
 }
-// searchbtn.addEventListener('click',function(){
-//     var searchboxtype = document.querySelector(".form-control").getAttribute("type")
-//     if(searchboxtype=="hidden"){
-//         const searchboxopen = document.querySelector(".form-control").setAttribute("type","search")
-//     }
-//     else{
-//         const searchboxopen = document.querySelector(".form-control").setAttribute("type","hidden")
-//     }
-// });
+
+
 searchbtn.addEventListener('click',function(){
     document.querySelector(".form-control").classList.toggle("form-control-open")
-    if(screen.width<576){
-        
-        
-    }
     logo.classList.toggle("logomove")
-    
 });
-    
-        
-        
-
 
 hiddenbtn.addEventListener('click',function(){
     sidenavbar.classList.toggle("closenav");
-    hiddenbtn.classList.toggle("roate")
+    document.querySelector(".nav-toggler").style = "display:none";
+    sidenavbaropen.style="display:flex";
+
+})
+sidenavbaropen.addEventListener('click',function(){
+    sidenavbar.classList.toggle("closenav");
+    sidenavbaropen.style="visibility: hidden;";
+    document.querySelector(".nav-toggler").style = "display:flex";
+});
+    
 
     
-})
+    
+
+
+    
+        
+        
+
+
 
 
    
