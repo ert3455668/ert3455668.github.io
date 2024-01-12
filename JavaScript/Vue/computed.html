@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label for="">a:</label>
+        <input type="text" v-model="a">
+        <label for="">b:</label>
+        <input type="text" v-model="b">
+
+        <br>
+        <p>加總:{{sum}}</p>
+    </div>
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data:{
+                a:0,
+                b:0,
+            },
+            methods:{
+
+            },
+            watch:{
+
+            },
+            computed:{
+                sum(){
+                    return parseInt(this.a)+parseInt(this.b)
+                }
+            }
+            
+            
+        })
+    </script>
+</body>
+</html>

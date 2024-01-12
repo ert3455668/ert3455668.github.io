@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="value">
+        <button v-on:click="submit">submit</button>
+        <p>{{valueMsg}}</p>
+        <div v-if="showContent">
+            <demo3 :value="valueMsg"></demo3>
+        </div>
+        
+    </div>
+
+    <!-- <template id="demo3">
+        <h1 style="color:red">{{values}}</h1>
+    </template> -->
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    
+    
+    <script>
+        Vue.component('demo3',{
+            template:'<h1 style="color:red">{{value}}</h1>',
+            props:['value'],
+           
+           
+
+        })
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                value:'',
+                valueMsg:'',
+                // values:'',
+               // message: 1
+                showContent:false
+            },
+            methods:{
+                submit(){
+                    this.showContent = true;
+                    this.valueMsg = this.value
+                    this.value=''
+                    
+                    
+                }
+            },
+            
+            watch:{
+                // value:function(){
+                //     this.valueMsg = this.value;
+                // }
+            }
+            
+            
+        }) 
+    </script>
+    
+</body>
+
+</html>

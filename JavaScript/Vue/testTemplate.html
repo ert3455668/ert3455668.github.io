@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="user.name">
+        <p>{{user.name}}</p>
+        <br>
+        <input type="text" v-model="user.age">
+        <p>{{user.age}}</p>
+        <br>
+        <button v-on:click="submit">submit</button>
+        <ul>
+            <li v-for="item in arr">{{item.name}}:{{item.age}}</li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script>
+
+        const app = new Vue({
+            el: '#app',
+            data: {
+                user: { name: '', age: '' },
+                arr: [],
+
+
+            },
+            methods: {
+                submit() {
+                    if (this.user.name != '') {
+                        this.arr.push(Object.assign({}, this.user));
+                        this.user = { name: '', age: '' }
+                    }
+                }
+            },
+
+
+
+        })
+    </script>
+</body>
+
+</html>

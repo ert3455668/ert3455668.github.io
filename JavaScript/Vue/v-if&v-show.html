@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="change">切換</button>
+        <br>
+        <h1 v-if="isVisiable">BuildSchool</h1>
+        <img v-else src="https://picsum.photos/id/684/600/400" alt="">
+        <h2 v-show="isVisiable">vueeeeeee</h2>
+        
+    </div>
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:'#app',
+            data:{
+                isVisiable:true,
+            },
+            methods:{
+                change(){
+                    this.isVisiable = !this.isVisiable
+                }
+            }
+        })
+    </script>
+</body>
+</html>

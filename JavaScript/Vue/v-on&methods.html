@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="sayHello">Click Me1</button>
+        <button @mouseleave="sayHello">Clicl Me2</button>
+        <input v-on:input="log">
+        <ul>
+            <li v-for="item in todoList">{{item}}</li>
+        </ul>
+        <input type="text" 
+        v-model="todoItem"
+        v-on:keyup.enter="addTodoItem"
+        >
+        <button v-on:click="addTodoItem">add</button>
+    </div>
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:'#app',
+            data:{
+                todoList:[],
+                todoItem:"",
+            },
+            methods:{
+                sayHello(){
+                    alert('Hello')
+                },
+                log(){
+                    console.log(123);
+                },
+                addTodoItem(){
+                    if(this.todoItem != ""){
+                        this.todoList.push(this.todoItem)
+                        console.log(this.todoItem)
+                        this.todoItem=""
+                        console.log(this.todoItem+'之後')
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

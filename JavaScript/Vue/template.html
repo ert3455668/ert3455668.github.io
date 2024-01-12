@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app" class="container mt-5">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" v-model="tododata.todolist">
+            <button class="btn btn-outline-secondary" v-on:click="btn_Add">新增</button>
+            <h2>{{tododata.todolist}}</h2>
+
+        </div>
+        <div class="group">
+            <!-- 我是範例 -->
+            <list :list_data="mytodolist" v-for="mytodolist in todoLists"></list>
+        </div>
+    </div>
+
+
+
+    <template id="to_do_list">
+        <div class="input-group mb-3 list ">
+            <div class="input-group-text">
+                <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input"
+                    v-model="list_data.checkbox">
+                    
+            </div>
+            <input type="text" class="form-control input_text edit" id="edit" aria-label="Text input with checkbox"
+                disabled="disabled" v-bind:value="list_data.todolist">
+            <button type="button" class="btn btn-success" v-on:click="btn_Save">保存</button>
+            <button type="button" class="btn btn-warning" v-on:click="btn_Edit">編輯</button>
+            <button type="button" class="btn btn-danger" v-on:click="btn_Del">刪除</button>
+        </div>
+    </template>
+
+
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+
+    <script>
+        var todoList = [
+            {
+                "account": 'ert3455668',
+                "index": '0',
+                "todolist": '你好我是測試1',
+                "checkbox": true,
+            },
+            {
+                "account": 'ert3455668',
+                "index": '1',
+                "todolist": '你好我是測試2',
+                "checkbox": false,
+            },
+            {
+                "account": 'ert3455668',
+                "index": '2',
+                "todolist": '你好我是測試3',
+                "checkbox": false,
+            },
+
+        ]
+
+
+
+
+        Vue.component('list', {
+            template: '#to_do_list',
+            props: ['list_data'],
+            methods: {
+                btn_Save() {
+
+                },
+                btn_Edit() {
+                    console.log("Edit");
+                },
+                btn_Del() {
+                    console.log("Del");
+                },
+            },
+
+        })
+
+        const todoListVue = new Vue({
+            el: '#app',
+            data: {
+                todoLists: todoList,
+                tododata: {
+                    account: 'ert3455668',
+                    index: '',
+                    todolist: '',
+                    checkbox: false,
+                }
+
+            },
+            methods: {
+                Add() {
+                    if(thsi.tododata.todolist =! ""){
+                        
+                    }
+                },
+
+            }
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>
