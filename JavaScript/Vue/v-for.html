@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in arr">{{index}} : {{item}}</li>
+        </ul>
+        <ul>
+            <li v-for="item in arr2">
+                {{item.name}} : {{item.age}}
+            </li>
+        </ul>
+
+        <button v-on:click="showAll">顯示全部</button>
+        <button v-on:click="showBigThenTwemty">顯示大於20歲的</button>
+        <ul>
+            <li v-for="item in arr3">{{item.name}} : {{item.age}}</li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script>
+        const arr= ['Apple','Banana','Orange']
+        const arr2 = [
+            {name :'Jimmy',age:19},
+            {name :'Andy',age:50},
+            {name :'Calvin',age:15},
+
+        ]
+        const arr3=[]
+        
+        const app = new Vue({
+            el:'#app',
+            data:{
+                arr,
+                arr2,
+                arr3:[],
+            },
+            methods:{
+                showAll(){
+                    this.arr3=this.arr2
+                },
+                showBigThenTwemty(){
+                    //透過filter去篩選指定年紀為條件
+                    this.arr3 = this.arr2.filter(x=>x.age>=20)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

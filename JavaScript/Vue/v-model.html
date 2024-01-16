@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="account" type="text">
+        <br>
+        <p>{{account}}</p>
+        <select v-model="selectItem">
+            <option value="bs">Bulid School</option>
+            <option value="vue">vue</option>
+            <option value="Javascript">Javascript</option>
+        </select>
+        <p>{{selectItem}}</p>
+        <br>
+        <label v-for="">同意</label>
+        <input v-model="isCheck" type="checkbox">
+        <p>{{isCheck}}</p>
+    </div>
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data:{
+                account:'',
+                selectItem:'vue',
+                isCheck:false
+            },
+            methods:{
+
+            }
+        })
+            
+    </script>
+</body>
+</html>

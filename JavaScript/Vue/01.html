@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{title}}
+        {{School}}
+        {{number+5}}
+        {{isTrue }}
+    </div>
+    
+    <script>
+        const app = new  Vue({
+            //掛載位置
+            el:'#app',
+            //資料 
+            data:{
+                title:'Hello Word',
+                School:'Build School Vue',
+                number:10,
+                isTrue: true
+
+            }
+        });
+
+    </script>
+</body>
+</html>

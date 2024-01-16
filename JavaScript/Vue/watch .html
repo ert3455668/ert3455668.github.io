@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="inputVal" >
+        <p>{{inputMsg}}</p>
+        <input type="text" v-model="person.name">
+        <p>{{nameMsg}}</p>
+
+    </div>
+    
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:"#app",
+            data:{
+                inputVal:"",
+                inputMsg:"",
+                person:{
+                    name:"",
+                },
+                nameMsg:"",
+
+            },
+            methods:{
+
+            },
+            //去監聽data中資料的變化 
+            watch:{
+                inputVal:function(){
+                    this.inputMsg = new Date()+"有人異動";
+                },
+                'person.name':function(){
+                    this.nameMsg = new Date()+"有人異動";
+                }
+                
+            }
+             
+        })
+    </script>
+</body>
+</html>
