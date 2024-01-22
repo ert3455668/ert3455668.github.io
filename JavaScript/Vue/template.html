@@ -17,10 +17,13 @@
             <h2>{{tododata.todolist}}</h2>
 
         </div>
+        
         <div class="group">
             <!-- 我是範例 -->
-            <list :list_data="mytodolist" v-for="mytodolist in todoLists" ></list>
+            <list :list_data="mytodolist" :index="index" v-for="(mytodolist,index) in todoLists" :key="index"></list>
         </div>
+
+        
     </div>
 
 
@@ -30,36 +33,41 @@
             <div class="input-group-text">
                 <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input"
                     v-model="list_data.checkbox">
-                    
+
             </div>
-            <input type="text" class="form-control input_text edit" id="edit" aria-label="Text input with checkbox"
-                disabled="disabled" v-bind:value="list_data.todolist">
-            <button type="button" class="btn btn-success" v-on:click="btn_Save">保存</button>
-            <button type="button" class="btn btn-warning" v-on:click="btn_Edit">編輯</button>
-            <button type="button" class="btn btn-danger" v-on:click="btn_Del">刪除</button>
+            <div class="form-control">
+                <input type="text" class=" input_text"  aria-label="Text input with checkbox"
+                disabled="true" v-bind:value="list_data.todolist">
+                <span><i class="fa-solid fa-pen-to-square "></i></span>   
+            </div>
+            
+            
+            <!-- <button type="button" class="btn btn-success" v-on:click="btn_Save(index)">保存</button> -->
+            <!-- <button type="button" class="btn btn-warning" v-on:click="btn_Edit">編輯</button> -->
+            <!-- <button type="button" class="btn btn-danger" v-on:click="btn_Del(index)">刪除</button> -->
         </div>
     </template>
 
-
+    <script src="https://kit.fontawesome.com/022bd99b02.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
 
     <script>
         var todoList = [
             {
                 "account": 'ert3455668',
-                
+
                 "todolist": '你好我是測試1',
                 "checkbox": false,
             },
             {
                 "account": 'ert3455668',
-                
+
                 "todolist": '你好我是測試2',
                 "checkbox": false,
             },
             {
                 "account": 'ert3455668',
-                
+
                 "todolist": '你好我是測試3',
                 "checkbox": false,
             },
@@ -71,19 +79,20 @@
 
         Vue.component('list', {
             template: '#to_do_list',
-            props: ['list_data'],
+            props: ['list_data', 'index'],
             methods: {
-                btn_Save() {
-                    
+                btn_Save(index) {
+                    //console.log(this.todoLists[index].todolist)
+                    console.log(this.$parent.todoLists[index].todolist);
                 },
                 btn_Edit() {
                     console.log("Edit");
                 },
-                btn_Del() {
+                btn_Del(index) {
                     console.log("Del");
-                    //this.todoLists.splice(this.tododata.index,1)
-                    console.log(this.todoLists[0].index);
-                    
+                    this.$parent.todoLists.splice(index, 1);
+
+
 
                 },
             },
@@ -104,9 +113,9 @@
             },
             methods: {
                 btn_Add() {
-                    if(this.tododata.todolist !== ""){
+                    if (this.tododata.todolist !== "") {
                         console.log(this.tododata)
-                        this.tododata.index = this.todoLists.length+1
+                        this.tododata.index = this.todoLists.length + 1
                         this.todoLists.push(this.tododata);
 
                     }
