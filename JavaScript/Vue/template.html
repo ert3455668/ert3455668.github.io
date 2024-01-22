@@ -33,19 +33,15 @@
             <div class="input-group-text">
                 <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input"
                     v-model="list_data.checkbox">
-
             </div>
-            <div class="form-control">
-                <input type="text" class=" input_text"  aria-label="Text input with checkbox"
-                disabled="true" v-bind:value="list_data.todolist">
-                <span><i class="fa-solid fa-pen-to-square "></i></span>   
-            </div>
+            <input type="text" class="form-control input_text"  aria-label="Text input with checkbox"
+             v-bind:value="list_data.todolist">
             
             
-            <!-- <button type="button" class="btn btn-success" v-on:click="btn_Save(index)">保存</button> -->
-            <!-- <button type="button" class="btn btn-warning" v-on:click="btn_Edit">編輯</button> -->
-            <!-- <button type="button" class="btn btn-danger" v-on:click="btn_Del(index)">刪除</button> -->
-        </div>
+             <button type="button" class="btn " v-on:click="btn_Save(index)" style="display:none"><i class="fa-solid fa-floppy-disk"></i></button> 
+             <button type="button" class="btn " v-on:click="btn_Edit" ><i class="fa-solid fa-pen-to-square "></i></button> 
+             <button type="button" class="btn " v-on:click="btn_Del(index)"><i class="fa-solid fa-trash"></i></button> 
+        </div> 
     </template>
 
     <script src="https://kit.fontawesome.com/022bd99b02.js" crossorigin="anonymous"></script>
