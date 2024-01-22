@@ -19,7 +19,7 @@
         </div>
         <div class="group">
             <!-- 我是範例 -->
-            <list :list_data="mytodolist" v-for="mytodolist in todoLists"></list>
+            <list :list_data="mytodolist" v-for="mytodolist in todoLists" ></list>
         </div>
     </div>
 
@@ -47,19 +47,19 @@
         var todoList = [
             {
                 "account": 'ert3455668',
-                "index": '0',
+                
                 "todolist": '你好我是測試1',
-                "checkbox": true,
+                "checkbox": false,
             },
             {
                 "account": 'ert3455668',
-                "index": '1',
+                
                 "todolist": '你好我是測試2',
                 "checkbox": false,
             },
             {
                 "account": 'ert3455668',
-                "index": '2',
+                
                 "todolist": '你好我是測試3',
                 "checkbox": false,
             },
@@ -74,13 +74,17 @@
             props: ['list_data'],
             methods: {
                 btn_Save() {
-
+                    
                 },
                 btn_Edit() {
                     console.log("Edit");
                 },
                 btn_Del() {
                     console.log("Del");
+                    //this.todoLists.splice(this.tododata.index,1)
+                    console.log(this.todoLists[0].index);
+                    
+
                 },
             },
 
@@ -99,9 +103,12 @@
 
             },
             methods: {
-                Add() {
-                    if(thsi.tododata.todolist =! ""){
-                        
+                btn_Add() {
+                    if(this.tododata.todolist !== ""){
+                        console.log(this.tododata)
+                        this.tododata.index = this.todoLists.length+1
+                        this.todoLists.push(this.tododata);
+
                     }
                 },
 
