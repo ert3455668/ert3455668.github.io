@@ -9,6 +9,9 @@
     <div id="app">
         <input v-bind:type="inputType" v-model="inputVal">
         <button v-on:click="changeType">查看密碼</button>
+        <br>
+        <input type="text" v-bind:disabled="type" >
+        <button v-on:click="editType">編輯</button>
     </div>
     <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
 
@@ -17,14 +20,20 @@
             el:"#app",
             data:{
                     inputVal:'',
-                    inputType:'text'
+                    inputType:'text',
+                    type:true,
             },
             methods:{
                 changeType(){
                     this.inputType = this.inputType=="text"
                     ?'password'
                     :'text'
+                },
+                editType(){
+                    this.type = this.type == true ? false : true
                 }
+
+
             }
         })
     </script> 

@@ -34,8 +34,11 @@
                 <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input"
                     v-model="list_data.checkbox">
             </div>
-            <input type="text" class="form-control input_text"  aria-label="Text input with checkbox"
-             v-bind:value="list_data.todolist">
+            <input type="text" 
+            class="form-control input_text"  
+            aria-label="Text input with checkbox"
+            v-bind:value="list_data.todolist"
+            v-bind:disabled="editType">
             
             
              <button type="button" class="btn " v-on:click="btn_Save(index)" style="display:none"><i class="fa-solid fa-floppy-disk"></i></button> 
@@ -72,13 +75,25 @@
 
         Vue.component('list', {
             template: '#to_do_list',
-            props: ['list_data', 'index'],
+            props: ['list_data', 'index',],
+            data:function () {
+                return {
+                    editType:true
+                };
+            },
             methods: {
                 btn_Save(index) {
-                    //console.log(this.todoLists[index].todolist)
+                    //1. 變更回edit鈕
+                    //2.input變回不可編輯狀態
                     console.log(this.$parent.todoLists[index].todolist);
+                    
                 },
                 btn_Edit() {
+                    //1.按下去的時候更改edit鈕轉換成save鈕
+                    //2.更改input欄狀態變成可編輯
+                    this.editType = this.editType == true ? false : true
+                    
+
                     console.log("Edit");
                 },
                 btn_Del(index) {
@@ -101,7 +116,10 @@
                     index: '',
                     todolist: '',
                     checkbox: false,
-                }
+                },
+                
+                
+                
 
             },
             methods: {
